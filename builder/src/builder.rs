@@ -86,7 +86,7 @@ impl BuilderContext {
             let name = &f.ident;
             // option fields. e.g. executable: String -> executable: Option<String>
             quote! {
-                pub fn #name(mut self, v: Impl Into<#ty>) -> Self {
+                pub fn #name(mut self, v: impl Into<#ty>) -> Self {
                     self.#name = Some(v.into());
                     self
                 }

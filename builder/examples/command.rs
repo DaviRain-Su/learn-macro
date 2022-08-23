@@ -13,10 +13,9 @@ fn main() {
     let command = Command::builder()
         .executable("find")
         .args(vec!["-c".into(), "-vv".into()])
-        // .env(vec![])
+        .env(vec![])
         .current_dir("/user/davirain")
         .finish();
 
     println!("{:#?}", command);
-    // println!("hello world!");
 }
